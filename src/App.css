@@ -1,38 +1,254 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(157, 68, 68);
+
+}
+h1 {
+  color: rgb(187, 55, 55);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.site-container{
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* index page */
+.wrapper{
+  width: 90%;
+  height: 700px;
+  background-color: rgb(250, 247, 247);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+
+}
+/* PROFILE PICTURE */
+.headshot{
+  grid-column: 1/2;
+}
+.headshot .attr {
+  font-size: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+.headshot img {
+  width: 100%
+}
+
+/* TITLE */
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/2;
+}
+.title h1{
+  font-size: 1rem;
+}
+
+/* LINKS */
+.links{
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 0.25fr 1fr;
+  box-sizing: border-box;
+  color:rgb(135, 39, 39);
+  margin: 0px 15px 0 15px;
+  border: 1px solid rgb(135, 39, 39);
+}
+.links p {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.linkswrapper div{
+  border-top: 1px solid rgb(135, 39, 39);
+  padding: 2px;
+  transition: background-color 0.25s;
+}
+.linkswrapper div:hover{
+  background-color: rgb(251, 241, 241);
+}
+
+/* BADGES / DOODADS */
+.badges{
+  width: 100%;
+  height: 100px;
+  grid-column: 1/2;
+  box-sizing: border-box;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px 0 0 0;
+  flex-wrap: wrap;
+}
+.badges img {
+  width: auto;
+  height: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* MAIN MENU */
+.mainmenu {
+  width: 90%;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 1/10;
+  height: 100%;
+  justify-self: center;
+
+ display: grid;
+ justify-items: center;
+
+ color:rgb(135, 39, 39);
+  margin: 0px 15px 0 15px;
+  border: 1px solid rgb(135, 39, 39);
+
+  box-sizing: border-box;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* STATUS */
+.status-wrapper{
+  margin: 25px 0 0 0;
+  width: 90%;
+  height: 215px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 0.25fr 1fr;
+  box-sizing: border-box;
+  color:rgb(135, 39, 39);
+  border: 1px solid rgb(135, 39, 39);
+  
+
+  display: block;
+  padding: 5px 10px 10px 10px;
+  /* overflow: auto; */
+  
+}
+#status-title {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid  rgb(135, 39, 39);
+}
+
+#status-details{
+  font-size: .6rem;
+  box-sizing: border-box;
+  padding: 5px 0 5px 0;
+}
+#status-message{
+  width: 100%;
+  height: 150px;
+  font-size: 1rem;
+  display: block;
+  overflow: hidden;
+  table-layout : fixed;
+
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding: 4px;
+  background-color: rgb(243, 235, 235);
+}
+#status-message p{
+  margin: auto;
+  overflow-y: scroll;
+}
+
+
+.badges-webrings{
+  width: 90%;
+  height: 250px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 0.75fr 1fr;
+  box-sizing: border-box;
+  color:rgb(135, 39, 39);
+  border: 1px solid rgb(135, 39, 39);
+  padding: 5px 10px 10px 10px;
+}
+#webrings-title {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid  rgb(135, 39, 39);
+  padding: 5px 10px 10px 10px;
+}
+
+#badgedesc {
+  width: 100%;
+  height: 150px;
+  font-size: 1rem;
+  display: flex;
+  overflow: hidden;
+  table-layout : fixed;
+  justify-content: center;
+  padding: 4px;
+}
+
+
+/* OTHER */
+.other {
+  width: 100%;
+  height: 100%;
+  grid-column: 3/4;
+  grid-row: 1/10;
+  border: 1px solid  rgb(135, 39, 39);
+  box-sizing: border-box;
+  padding: 0 15px 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* OTHER -PHOTOCARDS */
+.photocards {
+  display: flex;
+  gap: 10px
+}
+.photocards img {
+  display: block;
+  max-width:150px;
+  max-height:205px;
+  width: auto;
+  height: auto;
+}
+#chuu {
+  display: block;
+  max-width:150px;
+  max-height:205px;
+  width: auto;
+  height: auto;
+  background-image: url('https://hywfhpjrxseqlrzqyghg.supabase.co/storage/v1/object/public/watermarked/cmjfk6as5004ijr04qanem62p-front-1766311354823.webp');
+}
+
+/* MOBILE RESPONSIVE SETTINGS */
+@media (max-width: 500px){
+  .wrapper {
+      grid-template-columns: 100%;
+      gap: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .title h1{
+      font-size: 1.75rem;
+  }
+  .mainmenu {
+      height: 500px;
+      grid-column: 1/2;
+      grid-row: auto;
+  }
+  
+  .other {
+      grid-column: 1/2;
+      grid-row: auto;
+      height: 300px;
   }
 }
