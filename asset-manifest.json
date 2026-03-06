@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/marketchipping-site/static/css/main.2ab6ceda.css",
-    "main.js": "/marketchipping-site/static/js/main.00c76248.js",
-    "static/js/453.fd2f0c4a.chunk.js": "/marketchipping-site/static/js/453.fd2f0c4a.chunk.js",
-    "static/media/melty-land-nightmare.mp3": "/marketchipping-site/static/media/melty-land-nightmare.6eff903c07caf82e4ef1.mp3",
-    "static/media/hologif.gif": "/marketchipping-site/static/media/hologif.8eab08b5888383217d46.gif",
-    "static/media/josh.gif": "/marketchipping-site/static/media/josh.940c99e3f412d90df2d8.gif",
-    "static/media/sleepykitty.png": "/marketchipping-site/static/media/sleepykitty.d6a720e18fc231840dbc.png",
-    "static/media/ARTMS_Birth_visuals_Choerry_2.webp": "/marketchipping-site/static/media/ARTMS_Birth_visuals_Choerry_2.eb6b2c24b3d0149e89cd.webp",
-    "static/media/joshed.mp3": "/marketchipping-site/static/media/joshed.640972a3feb78b631766.mp3",
-    "static/media/sando.gif": "/marketchipping-site/static/media/sando.b8fdde4dedb77968cd3b.gif",
-    "static/media/binari.jpg": "/marketchipping-site/static/media/binari.a47d709596f2f7391385.jpg",
-    "static/media/pearlheart.png": "/marketchipping-site/static/media/pearlheart.9a01bf4924a5aa083174.png",
-    "static/media/logo.svg": "/marketchipping-site/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/marketchipping-site/index.html",
-    "main.2ab6ceda.css.map": "/marketchipping-site/static/css/main.2ab6ceda.css.map",
-    "main.00c76248.js.map": "/marketchipping-site/static/js/main.00c76248.js.map",
-    "453.fd2f0c4a.chunk.js.map": "/marketchipping-site/static/js/453.fd2f0c4a.chunk.js.map"
+    "main.css": "/static/css/main.46883846.css",
+    "main.js": "/static/js/main.d98e49f1.js",
+    "static/js/453.fd2f0c4a.chunk.js": "/static/js/453.fd2f0c4a.chunk.js",
+    "static/media/melty-land-nightmare.mp3": "/static/media/melty-land-nightmare.6eff903c07caf82e4ef1.mp3",
+    "static/media/hologif.gif": "/static/media/hologif.8eab08b5888383217d46.gif",
+    "static/media/josh.gif": "/static/media/josh.940c99e3f412d90df2d8.gif",
+    "static/media/sleepykitty.png": "/static/media/sleepykitty.d6a720e18fc231840dbc.png",
+    "static/media/ARTMS_Birth_visuals_Choerry_2.webp": "/static/media/ARTMS_Birth_visuals_Choerry_2.eb6b2c24b3d0149e89cd.webp",
+    "static/media/joshed.mp3": "/static/media/joshed.640972a3feb78b631766.mp3",
+    "static/media/sando.gif": "/static/media/sando.b8fdde4dedb77968cd3b.gif",
+    "static/media/binari.jpg": "/static/media/binari.a47d709596f2f7391385.jpg",
+    "static/media/pearlheart.png": "/static/media/pearlheart.9a01bf4924a5aa083174.png",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.46883846.css.map": "/static/css/main.46883846.css.map",
+    "main.d98e49f1.js.map": "/static/js/main.d98e49f1.js.map",
+    "453.fd2f0c4a.chunk.js.map": "/static/js/453.fd2f0c4a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ab6ceda.css",
-    "static/js/main.00c76248.js"
+    "static/css/main.46883846.css",
+    "static/js/main.d98e49f1.js"
   ]
 }
