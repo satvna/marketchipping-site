@@ -4,7 +4,8 @@ import React, { useState, useEffect } from "react";
 import binari from './images/binari.jpg';
 import { database } from "./firebaseConfig";
 import Josh from "./components/josh"
-import whistle from "./other-assets/joshed.mp3";
+import joshwhistle from "./other-assets/joshed.mp3";
+import mysong from "./other-assets/melty-land-nightmare.mp3";
 
 import { collection, doc, setDoc, onSnapshot  } from "firebase/firestore"; 
 
@@ -14,6 +15,9 @@ function App() {
     message: 'Loading...'});
 
     const [josh, setJosh] = useState(false);
+    const [audioPlaying, setAudioPlaying] = useState(false);
+    const [audio] = useState(new Audio(mysong));
+
 
   useEffect(
     () =>
@@ -23,22 +27,35 @@ function App() {
             date: doc.data().date,
             message: doc.data().message
           }
-          console.log("tempstatus = ", tempstatus.date);
           setStatus(tempstatus);
-          console.log(doc.id, " => ", doc.data());
         });
       }),
     []
   );
 
-  let audio = new Audio(whistle);
+  let whistle = new Audio(joshwhistle);
+
   const handleJosh = () =>{
     setJosh(true);
-    audio.play();
+    whistle.play();
     
     setTimeout(function() { setJosh(false); }, 3500);
-    setTimeout(function() { audio.pause(); }, 3560);
+    setTimeout(function() { whistle.pause(); }, 3560);
 
+  }
+
+  const handleAudioPlayer = () =>{
+    if (audioPlaying == false){
+      setAudioPlaying(true);
+      audio.play();
+      }
+    else if (audioPlaying == true) {
+      setAudioPlaying(false);
+      audio.pause();
+    }
+    else {
+      console.log('error');
+    }
   }
 
   return (
@@ -100,15 +117,22 @@ function App() {
 
       {/* <!-- OTHJERS --> */}
       <div className = "other">
-        <div class='photocards'>
+        <div className='photocards'>
           <div id="chuu">
           <img src='https://hywfhpjrxseqlrzqyghg.supabase.co/storage/v1/object/public/watermarked/cmjfk6as5004ijr04qanem62p-front-1766311354823.webp' alt='chuu photocard'></img>
           </div>
           <div id="choerry">
           <img src='https://hywfhpjrxseqlrzqyghg.supabase.co/storage/v1/object/public/watermarked/cmlkxye3z0043jr04rm8s8yx0-front-1770990396146.webp' alt = 'choerry photocard'></img>
           </div>
-    
-          
+        </div>
+        <div className = 'music-player-container'>
+          <div id='music-player-details'> Melty Land Nightmare </div>
+          <div id='music-player-mechanics'> 
+            <button onClick={() => handleAudioPlayer()}>
+              <i class={audioPlaying ? "fa-solid fa-pause" : "fa-solid fa-play"}></i>
+              </button>
+            
+          </div>
         </div>
       
       </div>
