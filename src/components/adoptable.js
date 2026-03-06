@@ -6,7 +6,7 @@ function Adoptable(props) {
     return (
         <div className='adoptable'>
         <div id = 'adopt-details'>
-          <p>Little guys who need clicks to live</p>
+          <p>dragons that need clicks to live</p>
         </div>
         <div id = 'adopt-container'>
           <div className='little-guy'>
