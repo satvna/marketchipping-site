@@ -5,8 +5,7 @@ import binari from './images/binari.jpg';
 import { database } from "./firebaseConfig";
 import Josh from "./components/josh"
 import joshwhistle from "./other-assets/joshed.mp3";
-import mysong from "./other-assets/melty-land-nightmare.mp3";
-
+import AudioPlayer from "./components/audio-player"
 import { collection, doc, setDoc, onSnapshot  } from "firebase/firestore"; 
 
 function App() {
@@ -15,8 +14,7 @@ function App() {
     message: 'Loading...'});
 
     const [josh, setJosh] = useState(false);
-    const [audioPlaying, setAudioPlaying] = useState(false);
-    const [audio] = useState(new Audio(mysong));
+
 
 
   useEffect(
@@ -44,19 +42,7 @@ function App() {
 
   }
 
-  const handleAudioPlayer = () =>{
-    if (audioPlaying == false){
-      setAudioPlaying(true);
-      audio.play();
-      }
-    else if (audioPlaying == true) {
-      setAudioPlaying(false);
-      audio.pause();
-    }
-    else {
-      console.log('error');
-    }
-  }
+
 
   return (
     <div className='site-container'>
@@ -125,15 +111,7 @@ function App() {
           <img src='https://hywfhpjrxseqlrzqyghg.supabase.co/storage/v1/object/public/watermarked/cmlkxye3z0043jr04rm8s8yx0-front-1770990396146.webp' alt = 'choerry photocard'></img>
           </div>
         </div>
-        <div className = 'music-player-container'>
-          <div id='music-player-details'> Melty Land Nightmare </div>
-          <div id='music-player-mechanics'> 
-            <button onClick={() => handleAudioPlayer()}>
-              <i class={audioPlaying ? "fa-solid fa-pause" : "fa-solid fa-play"}></i>
-              </button>
-            
-          </div>
-        </div>
+          <AudioPlayer/>
       
       </div>
       </div>

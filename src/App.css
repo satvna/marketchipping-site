@@ -248,15 +248,23 @@ h1 {
 /* MUSIC PLAYER */
 .music-player-container{
   width: 300px;
-  height: 50px;
+  height: 20%px;
   border: 1px solid  rgb(135, 39, 39);
 
   display: grid;
   grid-template-rows: 0.25fr 1fr;
+  gap: 10px;
 
   font-size: .6rem;
   box-sizing: border-box;
   padding: 5px 0 5px 0;
+}
+.music-player-container button{
+  width: 25px;
+  height: 25px;
+  color: rgb(135, 39, 39);
+  background-color:  rgb(243, 235, 235);
+  border: 1px solid  rgb(135, 39, 39);
 }
 #music-player-details{
   grid-row: 1/2;
