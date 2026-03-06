@@ -2,11 +2,19 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from "react";
 import binari from './images/binari.jpg';
+import chickadees from './images/deco/strawberry_bunny.gif';
+import strawberrygif from './images/deco/strawberry_bunny2.gif';
+import frame from './images/deco/frame2.gif';
+
+
 import { database } from "./firebaseConfig";
 import Josh from "./components/josh"
 import joshwhistle from "./other-assets/joshed.mp3";
 import AudioPlayer from "./components/audio-player"
+import Photocards from "./components/photocards"
+import Adoptable from "./components/adoptable"
 import { collection, doc, setDoc, onSnapshot  } from "firebase/firestore"; 
+
 
 function App() {
   const [status, setStatus] = useState({
@@ -52,7 +60,8 @@ function App() {
       <div className="wrapper">
         <div className = "headshot">
           <div className = "icon">
-              <img src = {binari}></img>
+              <img id = "binari" src = {binari}></img>
+              {/* <img id = "frame" src = {frame}></img> */}
           </div>
           <div class = "attr">
               <a href="https://www.webtoons.com/en/fantasy/the-dark-lords-confession/list?title_no=4464">icon: the dark lord's confession</a>   
@@ -103,16 +112,11 @@ function App() {
 
       {/* <!-- OTHJERS --> */}
       <div className = "other">
-        <div className='photocards'>
-          <div id="chuu">
-          <img src='https://hywfhpjrxseqlrzqyghg.supabase.co/storage/v1/object/public/watermarked/cmjfk6as5004ijr04qanem62p-front-1766311354823.webp' alt='chuu photocard'></img>
-          </div>
-          <div id="choerry">
-          <img src='https://hywfhpjrxseqlrzqyghg.supabase.co/storage/v1/object/public/watermarked/cmlkxye3z0043jr04rm8s8yx0-front-1770990396146.webp' alt = 'choerry photocard'></img>
-          </div>
-        </div>
+          <img id="strawberrygif1" src={strawberrygif}></img>
+          <Photocards/>
           <AudioPlayer/>
-      
+          <Adoptable/>
+          <img id="strawberrygif2" src={strawberrygif}></img>
       </div>
       </div>
     </div>
