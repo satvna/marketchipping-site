@@ -222,13 +222,24 @@ h1 {
   width: auto;
   height: auto;
 }
-#chuu {
-  display: block;
-  max-width:150px;
-  max-height:205px;
-  width: auto;
-  height: auto;
-  background-image: url('https://hywfhpjrxseqlrzqyghg.supabase.co/storage/v1/object/public/watermarked/cmjfk6as5004ijr04qanem62p-front-1766311354823.webp');
+
+/* JOSH */
+.popupWrapper {
+  position: absolute;
+}
+#josh img {
+  width: 40vw;
+}
+
+.fadeOut{
+  opacity:0;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+
+}
+.fadeIn{
+  opacity:1;
+  transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+
 }
 
 /* MOBILE RESPONSIVE SETTINGS */

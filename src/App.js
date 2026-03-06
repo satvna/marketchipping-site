@@ -3,7 +3,8 @@ import './App.css';
 import React, { useState, useEffect } from "react";
 import binari from './images/binari.jpg';
 import { database } from "./firebaseConfig";
-
+import Josh from "./components/josh"
+import whistle from "./other-assets/joshed.mp3";
 
 import { collection, doc, setDoc, onSnapshot  } from "firebase/firestore"; 
 
@@ -11,6 +12,8 @@ function App() {
   const [status, setStatus] = useState({
     date: 'Loading...', 
     message: 'Loading...'});
+
+    const [josh, setJosh] = useState(false);
 
   useEffect(
     () =>
@@ -28,8 +31,21 @@ function App() {
     []
   );
 
+  let audio = new Audio(whistle);
+  const handleJosh = () =>{
+    setJosh(true);
+    audio.play();
+    
+    setTimeout(function() { setJosh(false); }, 3500);
+    setTimeout(function() { audio.pause(); }, 3560);
+
+  }
+
   return (
     <div className='site-container'>
+      <div className= 'popupWrapper' visibility={{  display: josh?'visible':'hidden'}} >
+        <Josh josh={josh}/>
+      </div>
       <div className="wrapper">
         <div className = "headshot">
           <div className = "icon">
@@ -53,7 +69,7 @@ function App() {
               <div>blog [TBD]</div>
               {/* <!-- https://codex.wordpress.org/Integrating_WordPress_with_Your_Website --> */}
               <div>chatroom [TBD]</div>
-              <div>josh</div>
+              <div  onClick={() => handleJosh()}>josh</div>
           </div>
       </div>
 
