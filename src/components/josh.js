@@ -1,10 +1,10 @@
-import josh from '../images/josh.gif';
+import images from '../images';
 
 
 
 function Josh(props) {
     return (
-      <img className={props.josh ? 'fadeIn':'fadeOut'} src = {josh} id = "josh"></img>
+      <img className={props.josh ? 'fadeIn':'fadeOut'} src = {images.josh.url} id = "josh"></img>
     );
   }
 

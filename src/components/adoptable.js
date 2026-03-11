@@ -1,7 +1,3 @@
-import josh from '../images/josh.gif';
-
-
-
 function Adoptable(props) {
     return (
         <div className='adoptable'>

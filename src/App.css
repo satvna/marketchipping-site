@@ -1,3 +1,4 @@
+
 body {
   background-color: rgb(157, 68, 68);
   color:rgb(135, 39, 39);
@@ -15,7 +16,7 @@ h1 {
   align-items: center;
 }
 /* index page */
-.wrapper{
+.main-page-top-wrapper{
   width: 1000px;
   height: 610px;
   background-color: rgb(250, 247, 247);
@@ -25,7 +26,72 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
   position: relative;
+  opacity: 1;
 
+}
+.page-hidden{
+  display: none;
+  /* opacity: 0; */
+  /* transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s; */
+}
+.about-wrapper{
+  width: 1000px;
+  height: fit-content;
+  max-height: 700px;
+  background-color: rgb(250, 247, 247);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: 0.1fr 1fr;
+  position: relative;
+
+}
+#about-wrapper{
+  grid-template-columns: 0.5fr 1.5fr;
+}
+#about-me-wrapper{
+  grid-row: 2/3;
+  /* display: flex; */
+}
+.info-subpage-wrapper{
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.x-close {
+  width: fit-content;
+  height: 30px;
+  position: absolute;
+  top: -15%;
+  left: 0%;
+  background-color:rgb(250, 247, 247);
+  border: 1px solid rgb(157, 68, 68);
+  color: rgb(157, 68, 68);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.x-close-favsites {
+  width: fit-content;
+  height: 30px;
+  position: absolute;
+  top: -7%;
+  left: 0%;
+  background-color:rgb(250, 247, 247);
+  border: 1px solid rgb(157, 68, 68);
+  color: rgb(157, 68, 68);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.x-close:hover {
+  cursor: pointer;
 }
 /* PROFILE PICTURE */
 #sleepykitty {
@@ -70,6 +136,53 @@ h1 {
   font-size: 1rem;
 }
 
+/* TITLE */
+.title-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  padding: 0px;
+  flex-direction: column;
+}
+.title-right h1{
+  font-size: 1rem;
+  padding: 0;
+}
+.info-subpage-wrapper{
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+.favorite-sites-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  justify-self: start;
+  overflow-y: scroll;
+}
+.subheading {
+  font-size: 0.7rem;
+  padding: 0;
+  color: rgb(187, 55, 55);
+}
+.subheading h3{
+    margin: 0;
+}
+.subheadings-subheading h3{
+    margin: 0 0 15px 0;
+    font-style: italic;
+      color: rgb(187, 55, 55);
+    
+}
+.subheadings-subheading {
+  font-size: 0.5rem;
+  padding: 0;
+  color: rgb(125, 38, 38);
+  
+}
+
 /* LINKS */
 .links{
   grid-column: 1/2;
@@ -94,6 +207,10 @@ h1 {
 }
 .linkswrapper div:hover{
   background-color: rgb(251, 241, 241);
+}
+#info-links {
+  grid-row: 2/10;
+  height: fit-content;
 }
 
 /* BADGES / DOODADS */
@@ -152,6 +269,12 @@ h1 {
   /* overflow: auto; */
   
 }
+#status-wrapper-aboutme-positioner {
+  grid-column: 2/3;
+  display: flex;
+  gap: 10px;
+}
+
 #status-title {
   margin: 0px;
   display: flex;
@@ -251,11 +374,19 @@ h1 {
 /* JOSH */
 .popupWrapperHidden {
   position: absolute;
-  z-index: 0;
+  left: 25%;
+  top: 30%;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
 }
 .popupWrapperActive {
   position: absolute;
+  left: 25%;
+  top: 30%;
   z-index: 2;
+  display: flex;
+  justify-content: center;
 }
 #josh img {
   width: 40vw;
@@ -404,7 +535,7 @@ h1 {
   width: 100%;
   height: 100%;
   opacity: 0;
-  background-image: url('./images/deco/hologif.gif');
+  background-image: url('../public/images/deco/hologif.gif');
   background-size: cover;
   z-index: 0;
   visibility: hidden;
@@ -449,13 +580,91 @@ h1 {
   animation: bounceIn 2s infinite 2s;
 
 }
+/* INFO/ABOUT PAGE ENTRIES */
+#site-button {
+  width: 100px;
+}
+#site-button img{
+  width: 100px;
+}
+#code-snippet {
+  width: 90%;
+  height: 50%;
+  resize: none;
+}
+/* INFO/ABOUT PAGE ENTRIES */
+.display-entries-wrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.display-entries {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color:  rgb(157, 68, 68);
+
+}
+.display-entries-banner {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color:  rgb(157, 68, 68);
+
+}
+.display-entries-banner img {
+  max-width:200px;
+  max-height: 100px;
+}
+.display-entries-banner img:hover {
+  max-width: 200px;
+  cursor: pointer;
+}
+.display-entries-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  
+}
+.display-entries img {
+  max-width:200px;
+  max-height: 100px;
+}
+.display-entries img:hover {
+  max-width: 200px;
+  cursor: pointer;
+}
+.display-entries p {
+  margin: 0;
+}
+.display-entries-subtitle {
+  font-size: 0.7rem;
+  font-style: italic;
+  text-wrap: wrap;
+  width: 80%;
+}
+.divider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 40px 0;
+}
+ 
 /* MOBILE RESPONSIVE SETTINGS */
 @media (max-width: 500px){
   .site-container {
-    width: fit-content;
+    width: 100vw;
     height: fit-content;
+    overflow-x: hidden;
   }
-  .wrapper {
+  .page-controller {
+    display: flex;
+    justify-content: center;
+  }
+  .main-page-top-wrapper {
     margin-top: 10%;
       display: flex;
       flex-direction: column;
@@ -463,6 +672,44 @@ h1 {
       height: fit-content;
       width: 90%;
       /* margin: 10px; */
+  }
+  .about-wrapper {
+    margin-top: 20%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: fit-content;
+      width: 90%;
+      /* margin: 10px; */
+  }
+  .display-entries-wrapper {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+  }
+  .x-close{
+    top: -9%;
+  }
+   .x-close-favsites{
+     top: -7.5%;
+  }
+  .display-entries{
+    /* overflow-y: visible; */
+    width: 45%;
+  }
+  .display-entries img{
+    max-width: 100px;
+  }
+  #fav-sites-wrapper{
+    /* overflow-y: visible; */
+  }
+  .subheading{
+    display: flex;
+    justify-content: center;
+  }
+  .subheadings-subheading{
+    display: flex;
+    justify-content: center;
   }
   .headshot {
     display: flex;
@@ -477,6 +724,15 @@ h1 {
     top: -2%;
     left: -10%;
     width: 50%;
+  }
+
+  .popupWrapperHidden { 
+  left: -20%;
+  top: 15%;
+  }
+  .popupWrapperActive {
+  left: -20%;
+  top: 15%;
   }
   .title h1{
       font-size: 1.5rem;
@@ -494,6 +750,9 @@ h1 {
       gap: 10px;
       height: fit-content;
       position: relative;
+  }
+  #status-message {
+    height: 100%;
   }
   #photocards-positioner{
     margin-top:60px;
