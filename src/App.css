@@ -324,7 +324,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0 10px 0;
+  margin: 7px 0 10px 0;
 }
 .guestbook img {
   width: 30px;
@@ -332,10 +332,10 @@ h1 {
 }
 .badges-webrings{
   width: 90%;
-  height: 250px;
+  height: 275px;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 0.75fr 1fr;
+  grid-template-rows: 0.25fr 1fr;
   box-sizing: border-box;
   color:rgb(135, 39, 39);
   border: 1px solid rgb(135, 39, 39);
@@ -350,6 +350,14 @@ h1 {
   gap: 10px;
   border-bottom: 1px solid  rgb(135, 39, 39);
   padding: 5px 10px 10px 10px;
+  box-sizing: border-box;
+}
+#fansites {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
 }
 
 #badgedesc {
@@ -690,7 +698,7 @@ h1 {
     justify-content: center;
   }
   .main-page-top-wrapper {
-    margin-top: 10%;
+    margin: 10% 0 10% 0;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -760,11 +768,16 @@ h1 {
       font-size: 1.5rem;
   }
   .mainmenu {
-      height: 550px;
+      height: fit-content;
       grid-column: 1/2;
       grid-row: auto;
   }
-  
+  .badges-webrings {
+      height: fit-content;
+      grid-column: 1/2;
+      grid-row: auto;
+      margin-bottom: 20px;
+  }
   .other {
       display: flex;
       justify-content: center;

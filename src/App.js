@@ -10,6 +10,7 @@ import AudioPlayer from "./components/audio-player"
 import Photocards from "./components/photocards"
 import Adoptable from "./components/adoptable"
 import About from './components/about';
+import fanlistings from './fanlistings';
 import { collection, doc, setDoc, onSnapshot  } from "firebase/firestore"; 
 
 
@@ -22,6 +23,8 @@ function App() {
 
     const [main, setMain] = useState(true);
     const [about, setAbout] = useState(false);
+    const listFansites = fanlistings.map(temp =><a  target="_blank" rel="noopener noreferrer" href={temp.url}><img src={temp.thumbnail}/></a> );
+
 
 
   useEffect(
@@ -93,9 +96,9 @@ function App() {
             <p>links</p>
             <div className = "linkswrapper">
                 <div onClick={()=>handlePages("about")}>info</div>
-                <div>blog [TBD]</div>
+                <div style={{textDecoration: 'line-through'}}>blog [TBD]</div>
                 {/* <!-- https://codex.wordpress.org/Integrating_WordPress_with_Your_Website --> */}
-                <div>chatroom [TBD]</div>
+                <div style={{textDecoration: 'line-through'}}>chatroom [TBD]</div>
                 <div  onClick={() => handleJosh()}>josh</div>
             </div>
         </div>
@@ -123,7 +126,10 @@ function App() {
           </div>
           <div className='badges-webrings'>
             <p id="webrings-title">badges & webrings</p>
-            <p id = "badgedesc">Check in later to see!</p>
+            {/* <p id = "badgedesc">Check in later to see!</p> */}
+            <div id='fansites'>
+              {listFansites}
+            </div>
             <div id="birds">
               <img src={images.birdgif.url}></img>
 

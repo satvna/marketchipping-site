@@ -30,6 +30,12 @@ const graphicsList = [
         subtitle: "https://xixxii.neocities.org",
         thumbnail: images.xixxii.url,
         url: "https://xixxii.neocities.org/gooftown/foryou/borders"
+    },
+    {
+        title: "https://engrampixel.tumblr.com/",
+        subtitle: "https://engrampixel.tumblr.com/",
+        thumbnail: images.engrampixek.url,
+        url: "https://engrampixel.tumblr.com/"
     }
 ]
 
