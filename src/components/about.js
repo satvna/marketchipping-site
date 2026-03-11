@@ -9,9 +9,15 @@ function About(props) {
     const [favSites, setFavSites] = useState(false);
     const [pageName, setPageName] = useState("🍓 about me 🍓");
 
-    const handleInfoPages = (pageName) =>{
+    
+  const scrollToSubheading = (subheading) =>{
+    document.querySelector(`#${subheading}`).scrollIntoView();
+  }
+
+  const handleInfoPages = (pageName) =>{
     setAboutMe(false);
     setFavSites(false);
+
     if (pageName == "aboutme"){
       setAboutMe(true);
       setPageName("🍓 about me 🍓");
@@ -20,16 +26,18 @@ function About(props) {
       setFavSites(true);
       setPageName("🍓 favorite sites 🍓");
     }
+    if (pageName == "games" || pageName == "graphics" || pageName == "inspo"){
+      setFavSites(true);
+      setPageName("🍓 favorite sites 🍓");
+      scrollToSubheading(pageName);
+    }
   }
 
-  const scrollToSubheading = (subheading) =>{
-    document.querySelector(`#${subheading}`).scrollIntoView();
-  }
     return (
     <div id = "about-wrapper" className= {props.about?'about-wrapper':'page-hidden'}> 
-    <button className='x-close' onClick={()=>props.handlePages("main")}>x</button>
+    <button className={favSites?'x-close-favsites':'x-close'} onClick={()=>props.handlePages("main")}>{'<'}--- back to home</button>
      <div className = "title">
-            <h1>🍓 Info 🍓</h1>
+            <h1>🍓 info 🍓</h1>
         </div> 
         <div className = "title-right">
             <h1>{pageName}</h1>
@@ -39,9 +47,9 @@ function About(props) {
             <div className = "linkswrapper">
                 <div onClick={()=> handleInfoPages("aboutme")}>About me</div>
                 <div onClick={()=> handleInfoPages("favSites")}>Favorite sites</div>
-                <div  onClick={()=> scrollToSubheading("games")}>--- Games</div>
-                <div onClick={()=> scrollToSubheading("graphics")}>--- Graphics</div>
-                <div onClick={()=> scrollToSubheading("inspo")}>--- Inspo</div>
+                <div  onClick={()=> handleInfoPages("games")}>--- Games</div>
+                <div onClick={()=> handleInfoPages("graphics")}>--- Graphics</div>
+                <div onClick={()=> handleInfoPages("inspo")}>--- Inspo</div>
             </div>
         </div>
         <AboutMe aboutme={aboutme}/>

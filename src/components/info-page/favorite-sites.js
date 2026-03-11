@@ -2,6 +2,7 @@ import gamesList from "../object-lists/info-page/games";
 import graphicsList from "../object-lists/info-page/graphics";
 import inspoList from "../object-lists/info-page/inspo";
 import DisplayEntries from "../object-lists/info-page/display-entries";
+import images from "../../images";
 
 function FavSites(props) {
     const listGames = gamesList.map(game => <DisplayEntries isBanner={false} title={game.title} subtitle={game.subtitle} thumbnail={game.thumbnail} url={game.url}/>);
@@ -31,6 +32,9 @@ function FavSites(props) {
                     <div className="display-entries-wrapper">
                         {listGames}
                     </div>
+                    <div className="divider">
+                    <img  src={images.strawberrygif.url}></img>
+                    </div>
                     
                 </div>
                 {/* CATEGORY 3 */}
@@ -43,6 +47,9 @@ function FavSites(props) {
                     </div>
                     <div className="display-entries-wrapper">
                         {listGraphics}
+                    </div>
+                    <div className="divider">
+                    <img  src={images.strawberrygif.url}></img>
                     </div>
                 </div>
                 {/* CATEGORY 4 */}

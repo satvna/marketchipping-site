@@ -21,6 +21,12 @@ const images = {
         alt: "tech cat",
         url: process.env.PUBLIC_URL+ "/images/deco/techcat2.jpg"
     } ,
+    // ABOUT
+    button: {
+        alt: "my button",
+        url: process.env.PUBLIC_URL+ "/images/info-page-images/button.png"
+
+    }, 
 
     // PHOTOCARD
     choerry:{
@@ -56,11 +62,39 @@ const images = {
         alt: "solitaired url",
         url:  process.env.PUBLIC_URL+ './images/info-page-images/wordle.png'
 },
+ratchelor: {
+        alt: "ratchelor url",
+        url:  process.env.PUBLIC_URL+ './images/info-page-images/ratchelor.png'
+},
+infiniteCraft: {
+        alt: "infinite craft",
+        url:  process.env.PUBLIC_URL+ './images/info-page-images/infinite-craft.png'
+},
+stimulationClicker: {
+        alt: "",
+        url:  process.env.PUBLIC_URL+ './images/info-page-images/stimulation-clicker.png'
+},
     //GRAPHICS
     strawberrybunny: {
         alt: "strawberrybunny",
         url:  process.env.PUBLIC_URL+ './images/info-page-images/strawberrybunny.gif'
 
+    },
+    killychan: {
+         alt: "strawberrybunny",
+        url:  process.env.PUBLIC_URL+ './images/info-page-images/killychan.gif'
+    },
+    allyratworld: {
+         alt: "allyratworld",
+        url:  process.env.PUBLIC_URL+ './images/info-page-images/buttonneo.png'
+    },
+    graphicshoard: {
+         alt: "graphics-hoard",
+        url:  process.env.PUBLIC_URL+ './images/info-page-images/dragoncrystal.gif'
+    },
+    xixxii: {
+         alt: "graphics-hoard",
+        url:  process.env.PUBLIC_URL+ './images/info-page-images/home04.gif'
     }
 }
 

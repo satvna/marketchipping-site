@@ -7,7 +7,7 @@ function DisplayEntries(props) {
 
     return (
         
-            <div className="display-entries">
+            <div className={props.isBanner?"display-entries-banner":"display-entries"}>
                 <div className={props.isBanner?"page-hidden":"display-entries-title"}>
                     <p>{props.title}</p>
                 </div>

@@ -65,9 +65,7 @@ function App() {
   return (
     <div className='site-container'>
         <div className='page-controller'>
-        <div className= {josh ?'popupWrapperActive':'popupWrapperHidden'} >
-          <Josh josh={josh}/>
-        </div>
+        
         <div className= {main ? "main-page-top-wrapper" :  "page-hidden"}>
           <img id="sleepykitty" src={images.sleepykitty.url}></img>
 
@@ -89,6 +87,9 @@ function App() {
 
         {/* <!-- LINKS --> */}
         <div className = "links">
+          <div className= {josh ?'popupWrapperActive':'popupWrapperHidden'} >
+          <Josh josh={josh}/>
+        </div>
             <p>links</p>
             <div className = "linkswrapper">
                 <div onClick={()=>handlePages("about")}>about</div>
