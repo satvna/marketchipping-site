@@ -54,11 +54,22 @@ h1 {
 #about-me-wrapper{
   grid-row: 2/3;
   /* display: flex; */
+  position: relative;
+  overflow-y: visible;
 }
 .info-subpage-wrapper{
   width: 100%;
   height: 100%;
   overflow-y: scroll;
+}
+#pagedoll {
+  position: absolute;
+  top: 30%;
+  right: -15%;
+}
+#pagedoll img {
+  width: 60%;
+
 }
 .x-close {
   width: fit-content;
@@ -307,7 +318,18 @@ h1 {
   overflow-y: scroll;
 }
 
-
+/* GUESTBOOK */
+.guestbook{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 10px 0;
+}
+.guestbook img {
+  width: 30px;
+  height: 30px;
+}
 .badges-webrings{
   width: 90%;
   height: 250px;
@@ -317,6 +339,7 @@ h1 {
   box-sizing: border-box;
   color:rgb(135, 39, 39);
   border: 1px solid rgb(135, 39, 39);
+  margin-top: 20px;
   padding: 5px 10px 10px 10px;
 }
 #webrings-title {
@@ -339,7 +362,12 @@ h1 {
   justify-content: center;
   padding: 4px;
 }
-
+#birds {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* OTHER */
 .other {
@@ -584,9 +612,6 @@ h1 {
 #site-button {
   width: 100px;
 }
-#site-button img{
-  width: 100px;
-}
 #code-snippet {
   width: 90%;
   height: 50%;
@@ -700,9 +725,6 @@ h1 {
   .display-entries img{
     max-width: 100px;
   }
-  #fav-sites-wrapper{
-    /* overflow-y: visible; */
-  }
   .subheading{
     display: flex;
     justify-content: center;
@@ -776,5 +798,8 @@ h1 {
   }
   #strawberrygif2 {
     bottom: 10px;
+  }
+  #pagedoll {
+    display: none;
   }
 }

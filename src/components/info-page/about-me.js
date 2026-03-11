@@ -19,6 +19,7 @@ function AboutMe(props) {
                 </div>
                 </div>
             </div>
+           
             {/* MY BUTTON */}
             <div id="status-wrapper-button-positioner" className="status-wrapper">
             <p id="status-title">button</p>
@@ -27,15 +28,19 @@ function AboutMe(props) {
                
                 <div id = "status-message">
                      <div id = "site-button">
-                        <img src={images.button.url}></img>
+                        <a href="https://marketchipping.xyz" title="marketchipping.xyz"><img src={images.button.url} width="88" height="31"/></a>
                     </div>
                     <textarea id="code-snippet" rows="2" cols="11" readOnly="">
-                        {'<a href="https://www.marketchipping.xyz" title="marketchipping.xyz"><img src="" width="88" height="31"></a>'}
+                        {'<a href="https://marketchipping.xyz" title="marketchipping.xyz"><img src="http://marketchipping.xyz/images/marketchipping.gif" width="88" height="31"/></a>'}
                     </textarea>
                 </div>
                 </div>
             </div>
+             
           </div>
+          <div id="pagedoll">
+                <img src={images.aya.url}></img>
+            </div>
           </div>
     );
   }

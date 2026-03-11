@@ -13,6 +13,10 @@ const images = {
         alt: "bouncing strawberry gif",
         url:  process.env.PUBLIC_URL+ "/images/deco/strawberry_bunny2.gif"
     },
+    birdgif: {
+        alt: "bouncing strawberry gif",
+        url:  process.env.PUBLIC_URL+ "/images/deco/strawberry_bunny.gif"
+    },
     sleepykitty:{
         alt: "sleeping cat",
         url: process.env.PUBLIC_URL+ "/images/deco/sleepykitty.png"
@@ -24,9 +28,12 @@ const images = {
     // ABOUT
     button: {
         alt: "my button",
-        url: process.env.PUBLIC_URL+ "/images/info-page-images/button.png"
+        url: process.env.PUBLIC_URL+ "/images/marketchipping.gif"
 
     }, 
+    aya: {
+        url: process.env.PUBLIC_URL+ "/images/aya.jpg"
+    },
 
     // PHOTOCARD
     choerry:{
@@ -52,6 +59,9 @@ const images = {
     hologif:{
         alt: "pressed flower",
         url: process.env.PUBLIC_URL+ './images/deco/hologif.gif'
+    },
+    mail:{
+        url: process.env.PUBLIC_URL+ './images/mail.webp'
     },
     // GAMES
     solitaired: {
@@ -95,6 +105,16 @@ stimulationClicker: {
     xixxii: {
          alt: "graphics-hoard",
         url:  process.env.PUBLIC_URL+ './images/info-page-images/home04.gif'
+    },
+    engrampixek: {
+         alt: "engrampixel",
+        url:  'http://media.tumblr.com/tumblr_m5106aHKT11qid2nw.gif'
+    },
+
+    //INSPO
+    mushmallow: {
+         alt: "mushmallow",
+        url:  process.env.PUBLIC_URL+ './images/info-page-images/mushmallow.png'
     }
 }
 

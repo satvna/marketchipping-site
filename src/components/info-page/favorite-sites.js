@@ -58,7 +58,7 @@ function FavSites(props) {
                         <h3>Inspo</h3>
                     </div>
                     <div className="subheadings-subheading">
-                        <h3>Sites I really admire!</h3>
+                        <h3>Other cool sites!</h3>
                     </div>
                     <div className="display-entries-wrapper">
                         {listInspo}

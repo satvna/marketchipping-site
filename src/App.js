@@ -92,7 +92,7 @@ function App() {
         </div>
             <p>links</p>
             <div className = "linkswrapper">
-                <div onClick={()=>handlePages("about")}>about</div>
+                <div onClick={()=>handlePages("about")}>info</div>
                 <div>blog [TBD]</div>
                 {/* <!-- https://codex.wordpress.org/Integrating_WordPress_with_Your_Website --> */}
                 <div>chatroom [TBD]</div>
@@ -114,11 +114,23 @@ function App() {
                 <p>{status.message}</p>
               </div>
             </div>
+            <div className = "guestbook">
+               <p>guestbook --{'>'} </p> 
+              <a href="https://marketchipping.atabook.org/">
+              <img src={images.mail.url}></img>
+              </a>
+            </div>
           </div>
           <div className='badges-webrings'>
             <p id="webrings-title">badges & webrings</p>
             <p id = "badgedesc">Check in later to see!</p>
+            <div id="birds">
+              <img src={images.birdgif.url}></img>
+
+            </div>
+
           </div>
+
         </div>
 
       
