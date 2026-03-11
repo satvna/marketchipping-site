@@ -125,7 +125,7 @@ function App() {
             </div>
           </div>
           <div className='badges-webrings'>
-            <p id="webrings-title">badges & webrings</p>
+            <p id="webrings-title">fanlistings</p>
             {/* <p id = "badgedesc">Check in later to see!</p> */}
             <div id='fansites'>
               {listFansites}
