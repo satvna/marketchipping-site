@@ -10,23 +10,31 @@ function AboutMe(props) {
         {/* ABOUT SECTION */}
          {/* MY INFO SUMMARY */}
          <div id="status-wrapper-aboutme-positioner" className="about-me">
-            <div  className="status-wrapper">
+            <div  className="aboutme-status-wrapper">
             <p id="status-title">about</p>
                 <div className = "status">
-                <div id = "status-details">hiiiiii</div>
-                <div id = "status-message">
-                    <p>i actually don't know what to put here :)</p>
+                <div id = "status-details"></div>
+                <div className = "status-message" id="about-me-description">
+                    <p>welcome to my personal site!</p>
+                    <p>this website adheres to industry standard mobile-second web design. feel free to view on your phone for a mobile-second browsing experience.</p>
+                    <p>it's still under construction (but aren't they all?)</p>
+
+                    <p>facts about me:</p>
+                    <p>- i love anime, video games, and i don't have a personality outside of that.</p>
+                    <p>- i only know how to center divs using flexbox</p>
+                    <p>- i love strawberries, but perhaps not to the extent my site implies</p>
+
                 </div>
                 </div>
             </div>
            
             {/* MY BUTTON */}
-            <div id="status-wrapper-button-positioner" className="status-wrapper">
+            <div id="status-wrapper-button-positioner" className="aboutme-status-wrapper">
             <p id="status-title">button</p>
                 <div className = "status">
-                <div id = "status-details">it's still a wip, but the URL will remain the same when it's updated.</div>
+                <div id = "status-details"></div>
                
-                <div id = "status-message">
+                <div className = "status-message" id="button-container">
                      <div id = "site-button">
                         <a href="https://marketchipping.xyz" title="marketchipping.xyz"><img src={images.button.url} width="88" height="31"/></a>
                     </div>

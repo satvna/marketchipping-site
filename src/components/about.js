@@ -7,7 +7,7 @@ function About(props) {
 
     const [aboutme, setAboutMe] = useState(true);
     const [favSites, setFavSites] = useState(false);
-    const [pageName, setPageName] = useState("🍓 about me 🍓");
+    const [pageName, setPageName] = useState("about me");
 
     
   const scrollToSubheading = (subheading) =>{
@@ -20,15 +20,15 @@ function About(props) {
 
     if (pageName == "aboutme"){
       setAboutMe(true);
-      setPageName("🍓 about me 🍓");
+      setPageName("about me");
     }
     if (pageName == "favSites"){
       setFavSites(true);
-      setPageName("🍓 favorite sites 🍓");
+      setPageName("favorite sites");
     }
     if (pageName == "games" || pageName == "graphics" || pageName == "inspo"){
       setFavSites(true);
-      setPageName("🍓 favorite sites 🍓");
+      setPageName("favorite sites");
       scrollToSubheading(pageName);
     }
   }

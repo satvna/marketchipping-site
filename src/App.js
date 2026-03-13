@@ -68,12 +68,11 @@ function App() {
   return (
     <div className='site-container'>
         <div className='page-controller'>
-        
         <div className= {main ? "main-page-top-wrapper" :  "page-hidden"}>
           <img id="sleepykitty" src={images.sleepykitty.url}></img>
-
+          
+          <div className='left-column'>
           <div className = "headshot">
-
             <div className = "icon">
                 <img id = "binari" src = {images.binari.url}></img>
                 {/* <img id = "frame" src = {frame}></img> */}
@@ -96,9 +95,6 @@ function App() {
             <p>links</p>
             <div className = "linkswrapper">
                 <div onClick={()=>handlePages("about")}>info</div>
-                <div style={{textDecoration: 'line-through'}}>blog [TBD]</div>
-                {/* <!-- https://codex.wordpress.org/Integrating_WordPress_with_Your_Website --> */}
-                <div style={{textDecoration: 'line-through'}}>chatroom [TBD]</div>
                 <div  onClick={() => handleJosh()}>josh</div>
             </div>
         </div>
@@ -106,24 +102,24 @@ function App() {
         <div id="adopt-positioner">
           <Adoptable/>
         </div>
-        
+        </div>
 
         <div className="mainmenu">
           <div className="status-wrapper">
           <p id="status-title">status</p>
             <div className = "status">
               <div id = "status-details">{status.date}</div>
-              <div id = "status-message">
+              <div className = "status-message" id="actual-homepage-status">
                 <p>{status.message}</p>
               </div>
             </div>
-            <div className = "guestbook">
+          </div>
+          <div className = "guestbook">
                <p>guestbook --{'>'} </p> 
               <a href="https://marketchipping.atabook.org/">
               <img src={images.mail.url}></img>
               </a>
             </div>
-          </div>
           <div className='badges-webrings'>
             <p id="webrings-title">fanlistings</p>
             {/* <p id = "badgedesc">Check in later to see!</p> */}
@@ -131,7 +127,7 @@ function App() {
               {listFansites}
             </div>
             <div id="birds">
-              <img src={images.birdgif.url}></img>
+              {/* <img src={images.birdgif.url}></img> */}
 
             </div>
 
