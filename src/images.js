@@ -84,6 +84,10 @@ stimulationClicker: {
         alt: "",
         url:  process.env.PUBLIC_URL+ './images/info-page-images/stimulation-clicker.png'
 },
+aislop: {
+    alt: "",
+    url:  process.env.PUBLIC_URL+ './images/info-page-images/aislop.jpg'
+},
     //GRAPHICS
     strawberrybunny: {
         alt: "strawberrybunny",

@@ -2,6 +2,13 @@ import images from "../../../images";
 
 const gamesList = [
     {
+        title: "your ai slop bores me",
+        subtitle: "A real-time multiplayer game where humans role-play as AI.",
+        thumbnail: images.aislop.url,
+        url: "https://youraislopbores.me//"
+    },
+    
+    {
         title: "Infinite Craft",
         subtitle: "A crafting game where you can make anything.",
         thumbnail: images.infiniteCraft.url,

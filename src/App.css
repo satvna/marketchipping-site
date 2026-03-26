@@ -836,6 +836,9 @@ h1 {
       padding: 0px 15px 0 15px;
 
   }
+  #fansites {
+    justify-content: center;
+  }
   .badges-webrings {
       height: fit-content;
       grid-column: 1/2;

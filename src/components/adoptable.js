@@ -10,8 +10,8 @@ function Adoptable(props) {
             <p>Gortholax the Destroyer</p>
             </div>
           <div className='little-guy'>
-            <a href="https://dragcave.net/view/pPMpd"><img src="https://dragcave.net/image/pPMpd.gif" style={{borderWidth: 0}} alt="Dragon Cave: Adopt one today!"/></a>
-            <p>2025 Hyundai Sonata</p>
+            <a href="https://dragcave.net/view/QzU1U"><img src="https://dragcave.net/image/QzU1U.gif" style={{borderWidth: 0}} alt="Dragon Cave: Adopt one today!"/></a>
+            <p>Smartpanel</p>
           </div>
         </div>
       </div>
