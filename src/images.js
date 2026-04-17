@@ -88,6 +88,10 @@ aislop: {
     alt: "",
     url:  process.env.PUBLIC_URL+ './images/info-page-images/aislop.jpg'
 },
+penultima: {
+    alt: "",
+    url:  process.env.PUBLIC_URL+ './images/info-page-images/penultima.png'
+},
     //GRAPHICS
     strawberrybunny: {
         alt: "strawberrybunny",

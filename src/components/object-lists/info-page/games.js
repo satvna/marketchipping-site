@@ -37,7 +37,16 @@ const gamesList = [
         subtitle: "Play as The Ratchelor, an eligible single rat looking for love.",
         thumbnail: images.ratchelor.url,
         url: "https://algorat.itch.io/the-ratchelor-a-rat-dating-sim"
+    },
+    {
+        title: "Penultima",
+        subtitle: "Short visual novel about guys in a mecha. Gorgeous art",
+        thumbnail: images.penultima.url,
+        url: "https://zetareishi.itch.io/penultima"
     }
+
+
+
 ]
 
 export default gamesList;
